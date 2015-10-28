@@ -7,20 +7,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity @Getter
-@Table(name="Course")
-public class Course {
+@Table(name="Professor")
+public class Professor {
 
     @Id
     @Column(name="id")
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
 
-    private String title;
+    private String firstName;
 
-    private List<Professor> professors = new ArrayList<>();
+    private String lastName;
 
-    private List<Schedule> schedules = new ArrayList<>();
+    private String email;
 
-    private List<Department> deparments = new ArrayList<>();
+    private List<Course> courses = new ArrayList<>();
+
+    private List<Department> departments = new ArrayList<>();
+
 
 }
